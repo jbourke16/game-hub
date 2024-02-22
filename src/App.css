@@ -1,0 +1,65 @@
+
+@import url('https://fonts.cdnfonts.com/css/games');
+
+body {
+  background: rgb(33,39,235);
+  background: linear-gradient(90deg, rgba(33,39,235,1) 0%, rgba(125,10,241,1) 50%, rgba(176,45,253,1) 100%);
+  font-family: 'Games', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0px 10px;
+  background-color: rgba(176,45,253,.5);
+}
+
+.nav-bar ul li {
+  list-style: none;
+  color: white;
+}
+
+.search-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.search-bar {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 40px;
+  text-align: center;
+
+}
+
+button {
+  font-family: 'Games', sans-serif;
+}
+
+.game-results {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid rgba(176,45,253,.3);
+  background-color: rgba(176,45,253,.3);
+}
+
+img {
+  height: 200px;
+  width: 300px;
+}
+
+
+
