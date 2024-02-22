@@ -22,7 +22,12 @@ nav {
 
 .nav-bar ul li {
   list-style: none;
-  color: white;
+}
+
+.games-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .search-section {
@@ -51,9 +56,10 @@ button {
 .game-results {
   height: 300px;
   width: 300px;
-  margin: 0 auto;
-  border: 1px solid rgba(176,45,253,.3);
+  margin: 10px auto;
+  border: 1px solid rgba(176,45,253,.8);
   background-color: rgba(176,45,253,.3);
+  align-content: center;
 }
 
 img {

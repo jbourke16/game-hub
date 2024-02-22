@@ -9,7 +9,6 @@ function Nav() {
           <ul>
             <li><Link to={'/'} Home /></li>
             <li><Link to={'/genres'} Genres /></li>
-            <li><a href="https://rawg.io/apidocs">Rawg.io</a></li>
           </ul>
         </nav>
     </header>

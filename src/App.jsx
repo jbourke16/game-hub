@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./Nav";
 import Search from "./Search";
+import Genres from "./Genres";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -41,13 +42,13 @@ function App() {
           <Nav />
             <Routes>
               <Route path='/' element={<p>Home</p>} />
-              <Route path='/genres' element={<p>Genres</p>} />
+              <Route path='/Genres' element={<p>Genres</p>} />
             </Routes>
         </ul>
       </nav>
 
       <Search setSearchTerm={setSearchTerm} search={search} handleSearchSubmit={handleSearchSubmit}/>
-
+      <div className="games-container">
       {games.map((game, i) => (
         <div className="game-results" key={i}>
           <h3>{game.name}</h3>
@@ -55,6 +56,7 @@ function App() {
           <img src={game.background_image} alt="" />
         </div>
       ))}
+      </div>
     </div>
   );
 }
