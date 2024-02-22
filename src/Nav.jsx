@@ -7,17 +7,19 @@ import { Spin as Hamburger} from 'hamburger-react';
 function Nav() {
 
   const [isOpen, setOpen] = useState(false)
-
+  console.log(isOpen)
   return (
     <div className="nav-bar">
       <Hamburger toggled={isOpen} toggle={setOpen} size={30} />
-        <nav>
-          <ul>
-            <li><Link to={'/'} Home /></li>
-            <li><Link to={'/About'} About /></li>
-            <li><Link to={'/Genres'} Genres /></li>
-          </ul>
-        </nav> 
+          {isOpen === true ?
+          
+          (<nav><ul>
+            <li>Home<Link to={'/'} Home /></li>
+            <li>About<Link to={'/About'} About /></li>
+            <li>Genres<Link to={'/Genres'} Genres /></li>
+          </ul></nav>)
+          :
+          (<div></div>)}
     </div>
   )
 }

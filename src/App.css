@@ -23,6 +23,7 @@ nav {
 .nav-bar ul li {
   list-style: none;
   font-size: 18px;
+  text-align: right;
 }
 
 .games-container {
