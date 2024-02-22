@@ -36,12 +36,12 @@ function App() {
   return (
     <div className="game-search">
       <nav>
-        <h1>Game Search</h1>
+        <h1>Game Hub</h1>
 
         <ul className="nav-bar-li">
           <Nav />
             <Routes>
-              <Route path='/' element={<p>Home</p>} />
+              <Route path='/' element={<p></p>} />
               <Route path='/Genres' element={<p>Genres</p>} />
             </Routes>
         </ul>
@@ -57,6 +57,10 @@ function App() {
         </div>
       ))}
       </div>
+
+      <footer>
+        <a href="https://rawg.io/apidocs">Rawg.io</a>
+      </footer>
     </div>
   );
 }
