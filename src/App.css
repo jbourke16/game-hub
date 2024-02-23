@@ -66,16 +66,21 @@ button {
 }
 
 .game-results {
-  height: 370px;
+  height: 385px;
   width: 315px;
   margin: 20px auto;
-  border: 1px solid rgba(176,45,253,.8);
-  background-color: rgba(176,45,253,.3);
+  border: 1px solid  rgba(176,45,253,.8);
+  background-color: rgba(176,45,253,.09);
   align-content: center;
 }
 
+.game-results h3, p {
+  margin: 15px 2px;
+
+}
+
 img {
-  height: 250px;
+  height: 245px;
   width: 315px;
 }
 
@@ -103,6 +108,15 @@ footer a:hover {
   .games-container {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .game-results {
+    width: 350px;
+  }
+
+  img {
+    width: 350px;
+    height: 250px;
   }
 
 }

@@ -54,6 +54,7 @@ function App() {
         <div className="game-results" key={i}>
           <h3>{game.name}</h3>
           <p>Rating: {game.rating}/5 ⭐️</p>
+          <p>Release: {game.released}</p>
           <img src={game.background_image} alt="" />
         </div>
       ))}
