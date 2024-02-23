@@ -14,9 +14,9 @@ function Nav() {
           {isOpen === true ?
           
           (<nav><ul>
-            <li className="navlink"><Link to= "/"> Home </Link></li>
-            <li className="navlink"><Link to= "/about"> About </Link></li>
-            <li className="navlink"><Link to= "/genres"> Genres </Link></li>
+            <li><Link className="navlink" to= "/"> Home </Link></li>
+            <li><Link className="navlink" to= "/about"> About </Link></li>
+            <li><Link className="navlink" to= "/genres"> Genres </Link></li>
           </ul></nav>)
           :
           (<div></div>)}

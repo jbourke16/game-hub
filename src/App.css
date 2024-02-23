@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 nav {
@@ -20,8 +20,12 @@ nav {
   background-color: rgba(176,45,253,.5);
 }
 
-.navlink li {
+.navlink {
   color: white;
+}
+
+.navlink:hover {
+  color: purple;
 }
 
 .nav-bar ul li {
@@ -83,9 +87,13 @@ footer a {
   margin-bottom: 10px;
 }
 
+footer a:hover {
+  color: purple;
+}
+
 @media (min-width: 400px) and (max-width: 767px) {
   h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .search-bar {

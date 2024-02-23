@@ -41,7 +41,9 @@ function App() {
         <ul className="nav-bar-li">
           <Nav />
             <Routes>
-              <Route path='/App.jsx' element={<Genres />} />
+              <Route path='/' element={<p></p>} />
+              <Route path='/about' element={<p></p>} />
+              <Route path='/genres' element={<p></p>} />
             </Routes>
         </ul>
       </nav>
