@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1>Game Hub</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Game Hub! This site allows you to search over 350k+ games, using the <a href="https://api.rawg.io/docs/">Rawg.io API</a>.
 
-## Available Scripts
+Game Hub lists the game title, ratings, release date, and studio. To find a game, type in your search term into the "Find Game" search bar. All relevant games will appear once you hit search.
 
-In the project directory, you can run:
+<h2>Making Game Hub<h2>
 
-### `npm start`
+<img src="Game Hub.png"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>React</h3>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React and its functionality, such as React icons (downloadable), functions, and components were used to build Game Hub. To fetch requests from Rawg.io and pull it into the search page, the following React JS was composed:
 
-### `npm test`
+```function App() {
+  const [games, setGames] = useState([]);
+  const [search, setSearchTerm] = useState("");
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  const apiKey = process.env.REACT_APP_API_KEY
 
-### `npm run build`
+  const fetchGame = async () => {
+    const res = await axios(
+      `https://api.rawg.io/api/games?key=${apiKey}&search=${search}`
+    );
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    //console.log(res.data.results);
+    setGames(res.data.results);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    console.log(games)
+  };
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  function handleSearchSubmit(e){
+    e.preventDefault()
+    fetchGame()
+    setSearchTerm("")
+  }
+  ```
 
-### `npm run eject`
+  The above React code calls game data from Rawg.io and allows users to input any search term, resulting in a list of any relevant games.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  When making the hamburger menu, an icon was downloaded from Netlify and the following code was implemented in the Nav component.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```
+  const [isOpen, setOpen] = useState(false)
+  console.log(isOpen)
+  return (
+    <div className="nav-bar">
+      <Hamburger toggled={isOpen} toggle={setOpen} size={30} />
+          {isOpen === true ?
+          
+          (<nav><ul>
+            <li>Home<Link to={'/'} Home /></li>
+            <li>About<Link to={'/About'} About /></li>
+            <li>Genres<Link to={'/Genres'} Genres /></li>
+          </ul></nav>)
+          });
+```
+The above code signals when a user clicks on the hamburger menu, which displays different links, and closes back up once the user clicks on it again.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h4>Resources</h4>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+    <li><a href="https://api.rawg.io/docs/">Rawg.io API</a></li>
+    <li><a href="https://hamburger-react.netlify.app/">Netlify</a> (for Hamburger menu animation/icon)</li>
+    <li><a href="https://cssgradient.io/">CSSGradient.io</a></li>
+    <li>Axios</li>
+</ul>

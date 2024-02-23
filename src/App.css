@@ -58,8 +58,8 @@ button {
 }
 
 .game-results {
-  height: 350px;
-  width: 300px;
+  height: 370px;
+  width: 315px;
   margin: 20px auto;
   border: 1px solid rgba(176,45,253,.8);
   background-color: rgba(176,45,253,.3);
@@ -68,7 +68,7 @@ button {
 
 img {
   height: 250px;
-  width: 300px;
+  width: 315px;
 }
 
 footer a {
