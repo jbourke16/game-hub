@@ -14,10 +14,9 @@ function Nav() {
           {isOpen === true ?
           
           (<nav><ul>
-            <li>Home<Link to={'/'} Home /></li>
-            <li>About<Link to={'/About'} About /></li>
-            {/* <li>Genres<Link to={'/Genres'} Genres /></li> */}
-           <li><Link to= "/Genres"> Genres </Link></li>
+            <li className="navlink"><Link to= "/"> Home </Link></li>
+            <li className="navlink"><Link to= "/about"> About </Link></li>
+            <li className="navlink"><Link to= "/genres"> Genres </Link></li>
           </ul></nav>)
           :
           (<div></div>)}
