@@ -66,7 +66,7 @@ button {
 }
 
 .game-results {
-  height: 385px;
+  height: 370px;
   width: 315px;
   margin: 20px auto;
   border: 1px solid  rgba(176,45,253,.8);
@@ -76,7 +76,7 @@ button {
 
 .game-results h3, p {
   margin: 15px 2px;
-
+  font-size: 14px;
 }
 
 img {
@@ -128,6 +128,10 @@ footer a:hover {
 
   .search-bar {
     width: 210px;
+  }
+
+  .game-results h3, p {
+    font-size: 15px;
   }
 
   .games-container {
