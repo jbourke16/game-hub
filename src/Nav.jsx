@@ -16,7 +16,8 @@ function Nav() {
           (<nav><ul>
             <li>Home<Link to={'/'} Home /></li>
             <li>About<Link to={'/About'} About /></li>
-            <li>Genres<Link to={'/Genres'} Genres /></li>
+            {/* <li>Genres<Link to={'/Genres'} Genres /></li> */}
+           <li><Link to= "/Genres"> Genres </Link></li>
           </ul></nav>)
           :
           (<div></div>)}

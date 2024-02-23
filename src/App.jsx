@@ -41,8 +41,7 @@ function App() {
         <ul className="nav-bar-li">
           <Nav />
             <Routes>
-              <Route path='/App.jsx' element={<p></p>} />
-              <Route path='/Genres' element={<a href="https://api.rawg.io/docs/#operation/genres_list"></a>} />
+              <Route path='/App.jsx' element={<Genres />} />
             </Routes>
         </ul>
       </nav>
